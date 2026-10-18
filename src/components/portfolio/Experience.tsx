@@ -8,7 +8,7 @@ export function Experience() {
       id="experience"
       eyebrow="Experience & Education"
       title="Learning by building, in public."
-      description="No fabricated job titles — just a honest record of study, shipped projects, and formal training."
+      description="No fabricated job titles — just an honest record of study, shipped projects, and formal training."
     >
       <ol className="relative ml-3 space-y-10 border-l border-hairline pl-8 md:ml-6">
         {timeline.map((t, i) => (
