@@ -18,8 +18,15 @@ function Card({ p, index }: { p: Project; index: number }) {
 
       <div className="relative flex items-start justify-between gap-4">
         <div>
-          <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-primary">
-            {p.tag}
+          <span className="inline-flex items-center gap-2">
+            <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider text-primary">
+              {p.tag}
+            </span>
+            {p.context && (
+              <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+                {p.context}
+              </span>
+            )}
           </span>
           <h3 className="mt-4 font-display text-xl font-semibold leading-tight md:text-2xl">
             {p.title}

@@ -1,7 +1,7 @@
 export const profile = {
   name: "Shady Algammal",
   fullName: "Shady Ashraf Mostafa Algammal",
-  role: "Backend Engineer",
+  role: "Backend Developer",
   tagline: "Building reliable APIs, scalable databases, and backend systems with Laravel, PHP & MySQL.",
   location: "Tanta, Egypt",
   email: "shadyalgmmal@gmail.com",
@@ -15,6 +15,8 @@ export const profile = {
 export const about = {
   intro:
     "Computer Science student at Tanta University with a backend-focused engineering direction. I design relational databases, build RESTful APIs with Laravel, and integrate AI-powered services into production-style systems.",
+  approach:
+    "I learn by building: pick a real problem, model the data properly, ship a working API, then harden it. I care about clean structure, honest documentation, and systems that other people can maintain.",
   pillars: [
     {
       title: "Backend Engineering",
@@ -39,34 +41,35 @@ export const about = {
 
 export const skillGroups = [
   {
-    label: "Backend",
-    items: ["Laravel 10/12", "PHP", "REST APIs", "Sanctum Auth", "MVC", "OOP"],
+    label: "Backend Engineering",
+    items: ["PHP", "Laravel 10 / 12", "RESTful API design", "MVC architecture", "Laravel Sanctum", "Auth & role-based access"],
   },
   {
     label: "Databases",
-    items: ["MySQL", "Schema Design", "Normalization (3NF)", "Migrations", "Eloquent ORM"],
+    items: ["MySQL", "Relational design", "Normalization (3NF)", "Eloquent ORM", "SQL", "Migrations"],
   },
   {
-    label: "Languages",
-    items: ["PHP", "Python", "SQL", "C++", "JavaScript", "HTML / CSS"],
-  },
-  {
-    label: "AI & Automation",
-    items: ["Hugging Face APIs", "LLM Routing", "Streamlit", "n8n"],
+    label: "Programming",
+    items: ["Python", "C++", "JavaScript", "HTML / CSS"],
   },
   {
     label: "Cybersecurity Foundations",
-    items: ["Linux Basics", "Networking", "Access Control", "Secure APIs"],
+    items: ["Networking fundamentals", "HTTP / HTTPS", "API authentication", "Access control", "Web app security concepts", "Secure backend design"],
   },
   {
-    label: "Tooling",
-    items: ["Git & GitHub", "Postman", "VS Code", "VirtualBox"],
+    label: "AI & Automation",
+    items: ["Hugging Face APIs", "LLM routing", "Streamlit", "n8n"],
+  },
+  {
+    label: "Tools & Platforms",
+    items: ["Git & GitHub", "Postman", "VS Code", "Linux fundamentals", "VirtualBox"],
   },
 ];
 
 export type Project = {
   title: string;
   tag: string;
+  context?: string;
   stack: string[];
   description: string;
   features: string[];
@@ -77,27 +80,45 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Faculty of Science — Exam Schedule System",
+    title: "Faculty of Science — Exam Schedule API",
     tag: "Production API",
+    context: "Academic · Deployed",
     stack: ["Laravel 12", "PHP", "MySQL", "Sanctum"],
     description:
-      "RESTful API backend for managing university exam schedules with role-based authentication and optimized bulk import pipelines for large course datasets.",
+      "A production-deployed RESTful API backend for managing and publishing university exam schedules — relational schema, role-based authentication, and bulk Excel import workflows for large course datasets.",
     features: [
       "Role-based auth with Laravel Sanctum",
-      "Eloquent relationships & migrations",
+      "Public & protected API endpoints",
       "Chunked Excel imports at scale",
-      "Public & protected endpoints",
+      "Migrations, seeders & Eloquent relationships",
     ],
     github: "https://github.com/Sh-algammal/exam-system",
     live: "https://faculty-of-science-final-exam.free.laravel.cloud",
     highlight: true,
   },
   {
+    title: "Mixture-of-Agents AI System",
+    tag: "AI / LLM",
+    context: "Collaborative project",
+    stack: ["Python", "Streamlit", "Hugging Face"],
+    description:
+      "A collaborative project exploring configurable multi-model routing and response aggregation through external AI APIs. My contributions: Hugging Face inference integration, asynchronous response handling, and work on the system architecture and Streamlit monitoring dashboard.",
+    features: [
+      "Multi-model AI routing",
+      "Async response handling",
+      "Streamlit monitoring dashboard",
+      "API-first architecture",
+    ],
+    github: "https://github.com/Sh-algammal/Mixture-of-Agents",
+    highlight: true,
+  },
+  {
     title: "Recipe Management System",
     tag: "Full-stack API",
+    context: "Personal project",
     stack: ["Laravel 10", "PHP", "MySQL"],
     description:
-      "Backend-driven recipe platform with authentication, CRUD endpoints, favorites, and a mobile-ready REST API layer.",
+      "A backend-driven recipe management system featuring authentication, CRUD operations, structured API responses, and favorites management — with a mobile-ready REST API layer.",
     features: [
       "Auth + favorites system",
       "Mobile-ready REST endpoints",
@@ -107,26 +128,12 @@ export const projects: Project[] = [
     github: "https://github.com/Sh-algammal/recipe-project",
   },
   {
-    title: "Mixture-of-Agents System",
-    tag: "AI / LLM",
-    stack: ["Python", "Streamlit", "Hugging Face"],
-    description:
-      "Configurable AI system that distributes prompts across multiple language models and aggregates the strongest responses through a routing layer.",
-    features: [
-      "Multi-model AI routing",
-      "Async response handling",
-      "Streamlit control dashboard",
-      "API-first architecture",
-    ],
-    github: "https://github.com/Sh-algammal/Mixture-of-Agents",
-    highlight: true,
-  },
-  {
     title: "School Management Database",
     tag: "Data modeling",
+    context: "Academic project",
     stack: ["SQL", "MySQL"],
     description:
-      "Normalized relational database for school operations — attendance, grading, and enrollment — with reporting queries and 3NF schema design.",
+      "A normalized relational database covering enrollment, attendance, and grades — with data-integrity constraints, reporting queries, and a documented 3NF schema design.",
     features: [
       "Normalized to 3NF",
       "SQL reporting queries",
@@ -138,6 +145,7 @@ export const projects: Project[] = [
   {
     title: "Task Management App",
     tag: "Laravel CRUD",
+    context: "Personal project",
     stack: ["Laravel", "PHP", "MySQL", "JavaScript"],
     description:
       "Task management application demonstrating clean Laravel CRUD patterns, MVC structure, and a responsive interface backed by MySQL persistence.",
@@ -148,6 +156,34 @@ export const projects: Project[] = [
       "MySQL persistence",
     ],
     github: "https://github.com/Sh-algammal/To-do-list",
+  },
+];
+
+export const timeline = [
+  {
+    period: "2023 — 2027",
+    title: "B.Sc. Computer Science",
+    org: "Tanta University — Faculty of Science",
+    body: "Backend-focused engineering direction: databases, operating systems, networking, and software engineering fundamentals. GPA 3.1 / 4.0.",
+    current: true,
+  },
+  {
+    period: "2024 — present",
+    title: "Backend Development Practice",
+    org: "Self-directed · Laravel & PHP",
+    body: "Built and deployed RESTful APIs with Laravel 10/12, Sanctum authentication, and MySQL — including a production exam-schedule API for the Faculty of Science.",
+  },
+  {
+    period: "2024 — present",
+    title: "Cybersecurity Foundations",
+    org: "Google · IBM · Cisco",
+    body: "Formal training in security fundamentals, networking, and access control — applied toward secure API and backend design.",
+  },
+  {
+    period: "2025",
+    title: "AI Systems Exploration",
+    org: "Collaborative · Python & Hugging Face",
+    body: "Contributed to a Mixture-of-Agents system: multi-model routing, async inference, and a Streamlit monitoring dashboard.",
   },
 ];
 

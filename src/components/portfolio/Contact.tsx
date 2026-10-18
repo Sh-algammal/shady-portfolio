@@ -20,11 +20,11 @@ export function Contact() {
             <span className="h-px w-6 bg-primary" /> Contact
           </div>
           <h2 className="max-w-3xl font-display text-4xl font-semibold tracking-tight text-gradient md:text-6xl">
-            Let's build something <span className="text-accent-gradient italic">solid</span>.
+            Have a problem <span className="text-accent-gradient italic">worth solving?</span>
           </h2>
           <p className="mt-5 max-w-xl text-muted-foreground">
-            Open to backend internships, freelance API work, and collaborative engineering
-            projects. Reach out — I respond fast.
+            Open to backend internships, collaborative engineering projects, and technical
+            conversations. Reach out — I respond fast.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-3">
