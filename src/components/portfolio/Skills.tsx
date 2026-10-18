@@ -15,10 +15,10 @@ const icons = [Boxes, Database, Code2, Sparkles, ShieldCheck, Wrench];
 export function Skills() {
   return (
     <Section
-      id="skills"
-      eyebrow="Capabilities"
+      id="expertise"
+      eyebrow="Technical Expertise"
       title="A focused toolkit, used in real projects."
-      description="The stack I reach for when designing APIs, modeling data, and shipping backend services."
+      description="Organized by discipline — the stack I reach for when designing APIs, modeling data, and hardening backend services."
     >
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {skillGroups.map((g, i) => {
