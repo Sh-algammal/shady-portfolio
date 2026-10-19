@@ -24,7 +24,17 @@ export const Route = createFileRoute("/")({
           "Laravel · PHP · REST APIs · MySQL. Featured projects, certifications and contact for Shady Ashraf Algammal.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://shady-portfolio.lovable.app/" },
+      { name: "twitter:title", content: "Shady Algammal — Backend Engineer" },
+      {
+        name: "twitter:description",
+        content:
+          "Laravel · PHP · REST APIs · MySQL. Featured projects, certifications and contact for Shady Ashraf Algammal.",
+      },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9942be35-ad5b-4402-8b5b-658483d35641" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9942be35-ad5b-4402-8b5b-658483d35641" },
     ],
+    links: [{ rel: "canonical", href: "https://shady-portfolio.lovable.app/" }],
   }),
   component: Index,
 });
