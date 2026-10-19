@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowUpRight, Github, Linkedin, Mail, Phone } from "lucide-react";
 import { profile } from "./data";
+import { ContactForm } from "./ContactForm";
 
 export function Contact() {
   return (
@@ -42,6 +43,8 @@ export function Contact() {
               <Phone className="h-4 w-4" /> {profile.phone}
             </a>
           </div>
+
+          <ContactForm />
 
           <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-hairline bg-hairline sm:grid-cols-3">
             {[
